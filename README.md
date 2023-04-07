@@ -15,6 +15,7 @@ The generator will create a random password based on your chosen preferences.
 ## Credits
 -The Odin Project for tutorials on functions (https://www.theodinproject.com/paths/foundations/courses/foundations)
 -Daniel Vega youtube tutorial (https://www.youtube.com/watch?v=CQb_48XMJo8)
+-Conditional statements in javascript (https://www.youtube.com/watch?v=IsG4Xd6LlsM)
 
 ## License
 Please see repository for inforamtion on license
