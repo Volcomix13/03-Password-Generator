@@ -7,49 +7,22 @@ const characters = {
   symbol: "!@#$%^&*()"
 };
 
+// Function to generate random characters/prompts
 
-//Prompts for user
-function prompts() {
-  console.log("I'm being clicked");
-
-  var characterLength = parseInt(prompt(" Please choose lenght of password, in numerical form, from 8-128")); 
-    if(characterLength <8 || characterLength >128) {
-      return "Password must be between 8-128 characters long";
-    } else if (isNaN(characterLength)) {
-      characterLength = prompt("Please enter a valid number");
-    } else {
-      alert("Password will be" + characterLength + "characters long");
-    }
-  
-  var uppercaseCharacters = confirm("Include uppercase letters?");
-
-  var lowercaseCharacters = confirm("Include lowercase letters?");
-
-  var specialCharacters =  confirm("Include special characters?");
-
-  var numbers = confirm("include numbers?");
-
-  //object
-  var choices = {
-    length: characterLength, 
-    uppercaseCharacters: uppercaseCharacters,
-    lowercaseCharacters: lowercaseCharacters,
-    specialCharacters: specialCharacters,
-    numbers: numbers,
-  };
-  console.log(choices);
-  return choices;
+function getRandomCharacter (characterset) {
+  const randomCharacter = Math.floor(Math.random() * characterset.length);
+  return characterset[randomCharacter];
 }
+
 
 function generatePassword () {//find a way to get the options in this function, will need to randomly select characters out of the chosen options
-  var password = '';
-  for (var i = 7; i < characterLength; i++){
-    var randomLetter = Math.floor(Math.random() * characterLength.length);
-    password = password + correctChoices[randomLetter];
-  }
-  return password;
+  const passwordLenght = parseInt(prompt ("Please enter a password length between 8 and 128"));
 
-}
+  if (isNaN(passwordLenght) || passwordLenght < 8 || passwordLenght > 128) {
+    alert("Please enter a valid password length");
+    return "",
+  }
+
 
  
 // Get references to the #generate element
