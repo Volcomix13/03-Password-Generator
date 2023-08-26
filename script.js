@@ -41,7 +41,7 @@ while (password.length < passwordLength) {
   const selectedCharacterSet = selectedCharacterSets[Math.floor(Math.random() * 
     selectedCharacterSets.length)];
     password += getRandomCharacter(selectedCharacterSet);
-}
+};
 
 return password;
 }
