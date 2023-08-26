@@ -9,8 +9,17 @@ No installation needed, simply access the website on your favorite browser.
 
 ## Usage
 In order to successfully use the password generator, follow the promps on the window pop ups.
-Click ok if you would like to include special charanters, numbers, etc., on your password. Otherwise click cancel to ommit options.
 The generator will create a random password based on your chosen preferences.
+
+Link:https://volcomix13.github.io/03-Password-Generator/
+GitHub:https://github.com/Volcomix13/03-Password-Generator
+
+
+![Image of main section of website](./Assets/Main.png)
+
+![Image of popup](./Assets/popup.png)
+
+![Imaege of generated password](./Assets/withPassword.png)
 
 ## Credits
 -The Odin Project for tutorials on functions (https://www.theodinproject.com/paths/foundations/courses/foundations)
@@ -18,4 +27,4 @@ The generator will create a random password based on your chosen preferences.
 -Conditional statements in javascript (https://www.youtube.com/watch?v=IsG4Xd6LlsM)
 
 ## License
-Please see repository for inforamtion on license
+Please see repository for information on license
