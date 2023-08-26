@@ -15,12 +15,12 @@ function getRandomCharacter (characterset) {
 }
 
 
-function generatePassword () {//find a way to get the options in this function, will need to randomly select characters out of the chosen options
-  const passwordLenght = parseInt(prompt ("Please enter a password length between 8 and 128"));
+function generatePassword () {
+  const passwordLength = parseInt(prompt ("Please enter a password length between 8 and 128"));
 
-  if (isNaN(passwordLenght) || passwordLenght < 8 || passwordLenght > 128) {
-    alert("Please enter a valid password length");
-    return "",
+  if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
+    alert("Please enter a valid password length.");
+    return "";
   }
 
 let password = "";
@@ -37,13 +37,14 @@ if (selectedCharacterSets.length === 0) {
   return "";
 }
 
-while (password.length < passwordLenght) {
+while (password.length < passwordLength) {
   const selectedCharacterSet = selectedCharacterSets[Math.floor(Math.random() * 
     selectedCharacterSets.length)];
     password += getRandomCharacter(selectedCharacterSet);
 }
 
 return password;
+}
  
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -53,13 +54,9 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  if (correctChoices) {
-   var newPassword = generatePassword();
-   passwordText.value = newPassword;
-   
-  }
-
+   passwordText.value = password;
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
