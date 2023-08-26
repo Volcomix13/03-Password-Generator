@@ -23,14 +23,34 @@ function generatePassword () {//find a way to get the options in this function, 
     return "",
   }
 
+let password = "";
 
+const selectedCharacterSets = [];
+for (const key in characters) {
+  if (confirm(`include ${key} characters?`)) {
+    selectedCharacterSets.push(characters[key]);
+  }
+}
+
+if (selectedCharacterSets.length === 0) {
+  alert("Please select at least one character set");
+  return "";
+}
+
+while (password.length < passwordLenght) {
+  const selectedCharacterSet = selectedCharacterSets[Math.floor(Math.random() * 
+    selectedCharacterSets.length)];
+    password += getRandomCharacter(selectedCharacterSet);
+}
+
+return password;
  
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var correctChoices = prompts();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   if (correctChoices) {
